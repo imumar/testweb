@@ -1,0 +1,14 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "description": "A simple website with MongoDB integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "mongodb": "^6.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
