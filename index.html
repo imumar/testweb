@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in;
+        }
+        
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in 0.5s both;
+        }
+        
+        .button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeIn 2s ease-in 1s both;
+        }
+        
+        .button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .info-section {
+            margin-top: 40px;
+            text-align: left;
+            animation: fadeIn 2s ease-in 1.5s both;
+        }
+        
+        .info-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello World! 🌍</h1>
+        <p>Welcome to my first website!</p>
+        <button class="button" onclick="showMessage()">Click me!</button>
+        
+        <div class="info-section">
+            <div class="info-card">
+                <h3>About This Site</h3>
+                <p>This is a simple website created with HTML, CSS, and JavaScript. It's hosted for free and ready to be customized!</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>What's Next?</h3>
+                <p>You can add more pages, customize the design, add your own content, or even connect it to a database.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("Hello! Your website is working perfectly! 🎉");
+        }
+        
+        // Add some interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.querySelector('.button');
+            
+            button.addEventListener('click', function() {
+                this.style.background = 'rgba(255, 255, 255, 0.4)';
+                setTimeout(() => {
+                    this.style.background = 'rgba(255, 255, 255, 0.2)';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
